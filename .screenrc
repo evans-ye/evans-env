@@ -1,0 +1,79 @@
+#Start message
+startup_message off
+
+# Set hardstatus always on
+#hardstatus alwayslastline " %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s "
+
+# Refresh the display when exiting programs
+altscreen on
+
+# Dynamic title
+shelltitle '$ |bash'
+
+# Disable vbell
+vbell off
+
+# Set default line buffer for the past messages.
+defscrollback 5000
+
+# Set default encoding using utf8.
+defutf8 on
+
+# Monitor all the background windows.
+defmonitor off
+
+# Use the shell suitable for debug.
+#defshell $HOME/bin/bash4
+
+# Set the caption for screen.
+#caption always "%{= kg}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{B}%m/%d %{W}%c:%s %{y}%l %{g}]"
+#caption always "%{= kg}[ %{G}%H %{g}][%= %-Lw%{= Bw}%n%f %t%{-}%+Lw %=| %M %d %0c:%s][ %{B}%m/%d %{W}%c:%s %{y}%l %{g}]"
+caption always "%{= kg}[ %{G}%H %{g}][%= %-Lw%{= Bw}%n%f %t%{-}%+Lw %= ][ %{B}%M %d %0c:%s %{y}%l %{g}]"
+
+
+# Refresh the display when exiting programs.
+altscreen on
+
+# Lock the screen after 600 seconds idle.
+#idle 600 lockscreen
+
+ard binding
+# bind Alt`~= to screen0~12
+bindkey "^[`" select 0
+bindkey "^[1" select 1
+bindkey "^[2" select 2
+bindkey "^[3" select 3
+bindkey "^[4" select 4
+bindkey "^[5" select 5
+bindkey "^[6" select 6
+bindkey "^[7" select 7
+bindkey "^[8" select 8
+bindkey "^[9" select 9
+bindkey "^[0" select 10
+bindkey "^[-" select 11
+bindkey "^[=" select 12
+## bind F7 to detach screen session (to background)
+#bindkey -k k7 detach
+## bind F8 to kill current screen window
+#bindkey -k k8 kill
+## bind F9 to create a new screen
+#bindkey -k k9 screen
+## bind F10 to rename current screen window
+#bindkey -k k; title
+## bind F11 to move to previous window
+#bindkey -k F1 prev
+## bind F12 to move to next window
+#bindkey -k F2 next 
+
+# bind F11 to move to previous window
+bindkey "^[[11~" prev
+# bind F12 to move to next window
+bindkey "^[[12~" next 
+# bind F9 to create a new screen
+bindkey "^[[14~" screen
+# bind F10 to rename current screen window
+bindkey "^[[13~" title
+# bind F8 to kill current screen window
+bindkey "^[[15~" kill
+
+nonblock on
