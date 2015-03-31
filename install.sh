@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -r \.gitconfig \.git-prompt.sh \.screenrc \.vim \.vimrc \.bashrc ~/
+cp -vr \.gitconfig \.git-prompt.sh \.screenrc \.vim \.vimrc \.bashrc ~/
